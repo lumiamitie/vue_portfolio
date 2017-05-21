@@ -1,0 +1,227 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One page portfolio site</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    
+
+</head>
+
+<body>
+    <div id="blog">
+        <div id="top"></div>
+        <div class="contain-to-grid sticky">
+            <nav class="top-bar" data-topbar>
+                <ul class="title-area">
+                    <li class="name">
+                        <h1>
+                            <a href="#">Minho Lee</a>
+                        </h1>
+                    </li>
+                    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                    <li class="toggle-topbar menu-icon">
+                        <a href="#">
+                            <span>Menu</span>
+                        </a>
+                    </li>
+                </ul>
+                <section class="top-bar-section">
+                    <!-- Right Nav Section -->
+                    <ul id="nav" class="right">
+                        <li><router-link to="/home">Home</router-link></li>
+                        <li><router-link to="/about">Activity</router-link></li>
+                        <li><router-link to="/article">Article</router-link></li>
+                        <li><router-link to="/contact">Contact</router-link></li>
+                    </ul>
+
+                </section>
+            </nav>
+        </div>
+
+        <div id="view">
+            <router-view></router-view>
+        </div>
+    </div>
+
+
+    <template id="t_home">
+        <section class="jumbo">
+            <div class="row">
+                <div class="large-12 columns">
+                    <h1>Data and Visualization</h1>
+                    <p class="text-center">
+                        <a href="http://lumiamitie.github.io?utm_source=portfolio&utm_medium=referral" target="_blank" class="medium button">블로그 방문하기</a>
+                    </p>
+                    <p class="text-center home-text">Vue.js와 Vue-Router를 공부하기 위해 만든 개인 포트폴리오 페이지입니다.<br />위 버튼을 눌러서 블로그에 방문하시면 데이터 분석 및 시각화와 관련된 다양한 글을 살펴볼 수 있습니다.</p>
+
+                </div>
+            </div>
+        </section>
+        
+    </template>
+
+    <template id="t_about">
+        <section id="about">
+            <div class="row">
+                <div class="small-12 large-12 columns">
+                    <div class="text-center">
+                        <h2>현재 진행하고 있는 활동들</h2>
+                        <p class="lighter-text">데이터 분석/시각화와 관련된 다양한 활동을 진행하고 있습니다.</p>
+                    </div>
+                    <div>
+                        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+                            <li>
+                                <img src="img/image1.jpg" alt="image1" />
+                                <h3 class="text-center">Team</h3>
+                                <p class="lighter-text">연세대학교 빅데이터 학술 동아리 yBigta의 데이터디자인 팀에서 활동하고 있습니다. 데이터디자인 팀은 다양한 시각화 기법을 이용해 효과적으로 데이터의 의미를 파악하고 전달할 수 있는 방법에 대해서 고민합니다.</p>
+                            </li>
+                            <li>
+                                <img src="img/image2.jpg" alt="image2" />
+                                <h3 class="text-center">Study</h3>
+                                <p class="lighter-text">웹개발스터디에서는 Vue.js와 Foundation을 이용해 SPA 형태로 포트폴리오를 작성하는 작업을 진행하고 있습니다. 현재 보여지고 있는 페이지가 해당 스터디에서 공부한 결과를 바탕으로 제작되었습니다.</p>
+                                <p class="lighter-text">D3 스터디에서는 d3.js를 가지고 웹을 기반으로 한 인터렉티브 시각화를 공부합니다.</p>
+                            </li>
+                            <li>
+                                <img src="img/image3.jpg" alt="image3" />
+                                <h3 class="text-center">Blog</h3>
+                                <p class="lighter-text">개인적으로 진행하는 프로젝트는 블로그에 공유합니다. 현재 진행하는 회사 업무와 연관되어있지 않더라도, 흥미가 있는 분야에 대해서 관심있게 탐구하고 정리합니다. 완성된 결과물뿐만 아니라 진행했던 과정, 어려움을 겪었던 부분, 해결 방법까지 다양한 내용에 대해 적어봅니다. 새롭게 접한 라이브러리에 대한 튜토리얼을 작성하기도 합니다.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="t_article">
+        <section id="portfolio">
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="text-center">
+                        <h2>Featured Postings</h2>
+                        <p class="lighter-text">블로그에 정리한 글과 스터디 자료 중 일부를 첨부합니다</p>
+                    </div>
+                    
+                    <div class="posting-list">
+                        <h4 class="text-left post-category">R 관련 블로그 포스팅</h4>
+                        <hr />
+                        <ul>
+                            <li><a href="" target="_blank"></a></li>
+                            <li><a href="http://lumiamitie.github.io/r/imager-color-quantization/?utm_source=portfolio&utm_medium=referral" target="_blank">Color Quantization in R</a></li>
+                            <li><a href="http://lumiamitie.github.io/r/ggplot2_adv_linechart/?utm_source=portfolio&utm_medium=referral" target="_blank">KOSPI200 데이터를 가지고 선그래프 그려보기</a></li>
+                            <li><a href="http://lumiamitie.github.io/r/visualization/ggplot2-01/?utm_source=portfolio&utm_medium=referral" target="_blank">ggplot2-01</a></li>
+                            <li><a href="http://lumiamitie.github.io/r/visualization/ggplot2-02/?utm_source=portfolio&utm_medium=referral" target="_blank">ggplot2-02</a></li>
+                            <li><a href="http://lumiamitie.github.io/r/visualization/ggplot2-03/?utm_source=portfolio&utm_medium=referral" target="_blank">ggplot2-03</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="posting-list">
+                        <h4 class="text-left post-category">D3 스터디</h4>
+                        <hr />
+                        <ul>
+                            <li><a href="https://datadesign-ybigta.github.io/slides/2017-d3study/intro/#/" target="_blank">Introduction (Slides)</a></li>
+                            <li><a href="https://datadesign-ybigta.github.io/slides/2017-d3study/ch3/index.html" target="_blank">Ch3. SVG</a></li>
+                            <li><a href="https://datadesign-ybigta.github.io/slides/2017-d3study/ch10/ch10_scatter_plot.html" target="_blank">Ch10. Scatter Plot</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="t_contact">
+        <section id="contact_">
+            <div class="row">
+                <div class="large-12 columns">
+
+                    <div class="text-center">
+                        <h2>Contact</h2>
+                        <p class="lighter-text">문의사항은 아래로 연락주세요</p>
+                    </div>
+                    <div>
+                        <ul class="small-block-grid-1 large-block-grid-3">
+                            <li>
+                                <ul>
+                                    <li><i class="fi-mail"></i> lumiamitie@gmail.com</li>
+                                    <li><i class="fi-social-github"></i> github.com/lumiamitie</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <footer>
+        <div class="copy">
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="large-4 pull-1 columns text-center">
+                        <p class="lighter-text">&copy; Minho Lee</p>
+                    </div>
+                    <div class="large-7 push-2 columns text-center">
+                        <!-- Please Leave this link out of respect for the designer -->
+                        <p class="lighter-text">Designed By :
+                            <a href="http://epickwebdesign.com">EPick Web Design</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+    <script>
+        $(document).foundation();
+    </script>
+    <script>
+        var home = Vue.extend({
+            template: '#t_home',
+            data: function() { return {}; }
+        })
+
+        var about = Vue.extend({
+            template: '#t_about',
+            data: function() { return {}; }
+        })
+
+        var article = Vue.extend({
+            template: '#t_article',
+            data: function() { return {}; }
+        })
+
+        var contact = Vue.extend({
+            template: '#t_contact',
+            data: function() { return {}; }
+        })
+
+        var router = new VueRouter({
+            routes: [
+                {path: '/', component: home},
+                {path: '/home', component: home},
+                {path: '/about', component: about},
+                {path: '/article', component: article},
+                {path: '/contact', component: contact}
+            ]
+        })
+
+        var app = new Vue({
+            router
+
+        }).$mount('#blog')
+    </script>
+</body>
+
+</html>
